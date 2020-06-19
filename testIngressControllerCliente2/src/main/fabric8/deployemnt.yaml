@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ${project.artifactId}
+  labels:
+    run: ${project.artifactId}
+spec:
+  selector:
+    matchLabels:
+      run: ${project.artifactId}
+  template:
+    metadata:
+      labels:
+        run: ${project.artifactId}
+    spec:
+      containers:
+      - image: ${docker.image.prefix}/${project.artifactId}:latest
+        name: ${project.artifactId}
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: cloud
+        - name: CLIENTE1_ENDPOINT
+          value: http://0.0.0.0:80
+        resources:
+              limits:  
+                memory: 150Mi
+                cpu: 50m
+              requests:
+                memory: 150Mi
+                cpu: 50m
