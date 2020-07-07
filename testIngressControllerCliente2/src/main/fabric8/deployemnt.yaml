@@ -23,7 +23,7 @@ spec:
         - name: SPRING_PROFILES_ACTIVE
           value: cloud
         - name: CLIENTE1_ENDPOINT
-          value: http://0.0.0.0:80
+          value: http://10.93.57.10:80
         resources:
               limits:  
                 memory: 150Mi

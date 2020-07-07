@@ -22,7 +22,7 @@ public class Cliente2Service {
 			throw new IllegalStateException("No se pudo leer el endpoint del rest Cliente 2. Por favor configurar.");
 		
 		try {
-			saludo = restTemplate.getForObject(this.CLIENTE2_ENDPOINT + "/saludo", String.class);
+			saludo = restTemplate.getForObject(this.CLIENTE2_ENDPOINT + "/cliente2/api/saludo", String.class);
 			return saludo;
 		} catch (Exception e) {
 			throw new Exception("Ocurrió un problema al saludar al cliente 2: " + e.getMessage(), e);

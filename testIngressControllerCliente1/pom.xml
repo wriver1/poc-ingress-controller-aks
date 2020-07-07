@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bancodebogota</groupId>
-	<artifactId>testIngressControllerCliente1</artifactId>
+	<artifactId>cliente1app</artifactId>
 	<version>0.0.1</version>
 	<name>testIngressControllerCliente1</name>
 	<description>Rest API que responde hola soy el cliente 1</description>

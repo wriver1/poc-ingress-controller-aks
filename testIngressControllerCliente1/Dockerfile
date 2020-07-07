@@ -7,4 +7,4 @@ VOLUME /tmp
 
 COPY maven /target/
 
-CMD ["java", "-XX:TieredStopAtLevel=1", "-XX:+UnlockExperimentalVMOptions", "-XshowSettings:vm", "-Dspring.backgroundpreinitializer.ignore=true", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/target/testIngressControllerCliente1-0.0.1.jar"]
+CMD ["java", "-XX:TieredStopAtLevel=1", "-XX:+UnlockExperimentalVMOptions", "-XshowSettings:vm", "-Dspring.backgroundpreinitializer.ignore=true", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/target/cliente1app-0.0.1.jar"]

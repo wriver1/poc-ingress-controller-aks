@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: cliente2-ingress
+  namespace: bdb-cliente2-des
+  annotations:
+    kubernetes.io/ingress.class: cliente2-nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  rules:
+    - http:
+        paths:
+        - backend:
+            serviceName: cliente2app
+            servicePort: 80
+          path: /cliente2(/|$)(.*)
